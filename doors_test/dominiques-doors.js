@@ -493,8 +493,8 @@ edges of the sprite image. */
 
   });
 
-  display.sprite_sheet.image.src = "dominiques-doors.png";
-  // display.sprite_sheet.image.src = "doors-edit.png";
+  //display.sprite_sheet.image.src = "dominiques-doors.png";
+  display.sprite_sheet.image.src = "doors-edit.png";
 
   window.addEventListener("resize", display.resize);
 
