@@ -152,7 +152,7 @@ edges of the sprite image. */
     //// GAME CLASSES ////
   //////////////////////
 
-  const Door = function(x, y, area, new_x, width=32,height=32) {
+  const Door = function(x, y, area, new_x, width=10,height=32) {
 
     this.animation = new Animation(display.sprite_sheet.frame_set.door, 5, "play");
     this.area = area;
@@ -214,7 +214,8 @@ edges of the sprite image. */
               //new Frame(126,  0, 18, 30,  1), new Frame(144,  0, 18, 31,  1, -1), new Frame(162,  0, 19, 29, 2), new Frame(181,  0, 19, 30, 2),
               new Frame(126,  0, 18, 31, 0, -1), new Frame(144,  0, 18, 31,  1, -1), new Frame(162,  0, 19, 30, -1), new Frame(181,  0, 19, 29, -1,1),
               //door, note door width here is hard-coded, but should force door class to get the right answer from the sprite sheet
-              new Frame(200,  0, 32, 32), new Frame(232,  0, 32, 32), new Frame(264,  0, 32, 32), new Frame(296,  0, 32, 32), new Frame(328,  0, 32, 32), new Frame(360,  0, 32, 32), new Frame(392,  0, 32, 32)],
+              //new Frame(200,  0, 32, 32), new Frame(232,  0, 32, 32), new Frame(264,  0, 32, 32), new Frame(296,  0, 32, 32), new Frame(328,  0, 32, 32), new Frame(360,  0, 32, 32), new Frame(392,  0, 32, 32)],
+              new Frame(200,  0, 10, 32), new Frame(232,  0, 10, 32), new Frame(264,  0, 10, 32), new Frame(296,  0, 10, 32), new Frame(328,  0, 10, 32), new Frame(360,  0, 10, 32), new Frame(392,  0, 10, 32)],
 
       frame_set: {
 

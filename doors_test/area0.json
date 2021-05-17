@@ -2,12 +2,12 @@
 
   "message":"Start",
   "background_color":"#052623",
-  "floor":62,
-  "height":64,
-  "width":128,
+  "floor":120,
+  "height":128,
+  "width":256,
 
   "doors":[
-      { "area":"area1.json", "x":86, "new_x":12 }
+      { "area":"area1.json", "x":246, "new_x":10 }
 
   ]
 
