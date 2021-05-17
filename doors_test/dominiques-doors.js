@@ -416,21 +416,18 @@ edges of the sprite image. */
               //if (game.dominique.velocity_x >0){ //enter door from left
               if (controller.right.active) { controller.right.active = false;
                   game.dominque.x = door.new_x + Math.max(game.dominique.half_width,32) + 1;
-                  game.loadArea(door.area, game.reset);
-
-                  return;
 
               }
               //else if (game.dominque.velocity_x <0){ //enter door from right
               if (controller.left.active) { controller.left.active = false;
                   game.dominique.x = door.new_x - Math.max(game.dominique.half_width,32) - 1;
                   //use the max width to displace player after entering door, otherwise will just go back through it
-                  game.loadArea(door.area, game.reset);
-
-                  return;
 
               }
 
+                  game.loadArea(door.area, game.reset);
+
+                  return;
 
 
 
