@@ -425,9 +425,9 @@ edges of the sprite image. */
 
               return;
 
-            }
 
-          } else { door.animation.mode = "rewind"; }
+
+             } else { door.animation.mode = "rewind"; }
 
           game.area.doors[index].animation.update();
 
