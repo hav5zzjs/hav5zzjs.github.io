@@ -294,7 +294,7 @@ edges of the sprite image. */
       jumping:false,
       velocity_x:0,
       velocity_y:0,
-      x:100,
+      x:50,//start more to the left100,
       y:100,
 
       //thats all the collision is? Just teleport the person back to the place you don't want it to go through?
@@ -306,27 +306,28 @@ edges of the sprite image. */
 
         } else if (this.x + this.half_width > game.area.width) {
 
-          if (game.area.message != "~The Passageway~") {
+          //this is funny, but taking it out
+          //if (game.area.message != "~The Passageway~") {
 
             this.x = game.area.width - this.half_width;
 
-          } else if (this.x - this.half_width > game.area.width) {
+         //} else if (this.x - this.half_width > game.area.width) {
 
-            game.engine.stop();
-            controller.right.active = false;
+         //  game.engine.stop();
+         //  controller.right.active = false;
 
-            game.loadArea("area0.json", function() {
+         //  game.loadArea("area0.json", function() {
 
-              game.reset();
+         //    game.reset();
 
-            });
+         //  });
 
-            alert("Dominique escaped the weird program full of pointless rooms and doors. She went to a much better, more interesting program.");
+         //  alert("Dominique escaped the weird program full of pointless rooms and doors. She went to a much better, more interesting program.");
 
-          }
+         //}
 
         }
-
+        //if we are not jumping and not on the floor, go to the floor
         if (this.y + this.half_height > game.area.floor) {
 
           this.jumping = false;
@@ -405,9 +406,10 @@ edges of the sprite image. */
             //take out the check if pressed down and just go through the door automatically
            // if (controller.down.active) { controller.down.active = false;
 
-              //game.dominique.x = door.new_x + 1;
+              //chaning this back since now only allowing entering doors from left
+              game.dominique.x = door.new_x + 1;
               //when you enter first door (which has to be from left, you end up inside another door automatically and infinitely go)
-              game.dominique.x = door.new_x - 1;
+              //game.dominique.x = door.new_x - 1;
               game.loadArea(door.area, game.reset);
 
               return;
