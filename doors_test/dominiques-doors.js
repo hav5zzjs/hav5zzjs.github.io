@@ -295,7 +295,7 @@ edges of the sprite image. */
       jumping:false,
       velocity_x:0,
       velocity_y:0,
-      x:50,//start more to the left100,
+      x:30,//start more to the left100,
       y:100,
 
       //thats all the collision is? Just teleport the person back to the place you don't want it to go through?
