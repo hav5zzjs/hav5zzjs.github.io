@@ -152,14 +152,15 @@ edges of the sprite image. */
     //// GAME CLASSES ////
   //////////////////////
 
-  const Door = function(x, y, area, new_x){ //}, width=32) {
+  const Door = function(x, y, area, new_x, width=32,height=32) {
 
     this.animation = new Animation(display.sprite_sheet.frame_set.door, 5, "play");
     this.area = area;
     this.new_x = new_x;
     this.x = x;
     this.y = y;
-    //this.width = width; //door width, used for collision
+    this.width = width; //door width, used for collision
+    this.height = height; //door height, used for collision
 
   };
 
@@ -401,27 +402,26 @@ edges of the sprite image. */
 
           let door = game.area.doors[index];
 
-          if (game.dominique.x > door.x && game.dominique.x < door.x + 32) {
+          if (game.dominique.x > door.x && game.dominique.x < door.x + door.width) {
 
             door.animation.mode = "play";
 
             //take out the check if pressed down and just go through the door automatically
-            //if (controller.down.active) { controller.down.active = false;
+            if (controller.down.active) { controller.down.active = false;
 
               //chaning this back since now only allowing entering doors from left
               //game.dominique.x = door.new_x + 1;
-              //when you enter first door (which has to be from left, you end up inside another door automatically and infinitely go)
-              //game.dominique.x = door.new_x - 1;
+              game.dominque.x = door.new_x + Math.max(game.dominique.half_width,door.width) + 1;
               //if entering door from left, put player on right of new door
               //if (game.dominique.velocity_x >0){ //enter door from left
-              if (controller.right.active) { controller.right.active = false;
-                  game.dominque.x = door.new_x + Math.max(game.dominique.half_width,32) + 1;
-              }
+             // if (controller.right.active) { controller.right.active = false;
+              //    game.dominque.x = door.new_x + Math.max(game.dominique.half_width,32) + 1;
+             // }
               //else if (game.dominque.velocity_x <0){ //enter door from right
-              if (controller.left.active) { controller.left.active = false;
-                  game.dominique.x = door.new_x - Math.max(game.dominique.half_width,32) - 1;
+            //  if (controller.left.active) { controller.left.active = false;
+             //     game.dominique.x = door.new_x - Math.max(game.dominique.half_width,32) - 1;
                   //use the max width to displace player after entering door, otherwise will just go back through it
-              }
+             // }
 
 
               game.loadArea(door.area, game.reset);
@@ -489,7 +489,7 @@ edges of the sprite image. */
 
         let door = game.area.doors[index];
 
-        game.area.doors[index] = new Door(door.x, game.area.floor - 32 - 3, door.area, door.new_x);
+        game.area.doors[index] = new Door(door.x, game.area.floor - door.height - 3, door.area, door.new_x);
 
       }
 
