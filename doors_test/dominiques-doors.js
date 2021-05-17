@@ -405,7 +405,9 @@ edges of the sprite image. */
             //take out the check if pressed down and just go through the door automatically
            // if (controller.down.active) { controller.down.active = false;
 
-              game.dominique.x = door.new_x + 1;
+              //game.dominique.x = door.new_x + 1;
+              //when you enter first door (which has to be from left, you end up inside another door automatically and infinitely go)
+              game.dominique.x = door.new_x - 1;
               game.loadArea(door.area, game.reset);
 
               return;
