@@ -152,7 +152,7 @@ edges of the sprite image. */
     //// GAME CLASSES ////
   //////////////////////
 
-  const Door = function(x, y, area, new_x){//}, width=32) {
+  const Door = function(x, y, area, new_x){ //}, width=32) {
 
     this.animation = new Animation(display.sprite_sheet.frame_set.door, 5, "play");
     this.area = area;
@@ -413,10 +413,10 @@ edges of the sprite image. */
               //game.dominique.x = door.new_x - 1;
               //if entering door from left, put player on right of new door
               if (game.dominique.velocity_x >0){ //enter door from left
-                  game.dominque.x = door.new_x + Math.max(game.dominique.half_width,32) + 1
+                  game.dominque.x = door.new_x + Math.max(game.dominique.half_width,32) + 1;
               }
               else if (game.dominque.velocity_x <0){ //enter door from right
-                  game.dominique.x = door.new_x - Math.max(game.dominique.half_width,32) - 1
+                  game.dominique.x = door.new_x - Math.max(game.dominique.half_width,32) - 1;
                   //use the max width to displace player after entering door, otherwise will just go back through it
               }
 
