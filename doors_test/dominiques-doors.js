@@ -408,7 +408,7 @@ edges of the sprite image. */
             //if (controller.down.active) { controller.down.active = false;
 
               //chaning this back since now only allowing entering doors from left
-              game.dominique.x = door.new_x + 1;
+              //game.dominique.x = door.new_x + 1;
               //when you enter first door (which has to be from left, you end up inside another door automatically and infinitely go)
               //game.dominique.x = door.new_x - 1;
               //if entering door from left, put player on right of new door
