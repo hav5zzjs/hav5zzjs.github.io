@@ -2,9 +2,9 @@
 
   "message":"Zone2",
   "background_color":"#006666",
-  "floor":250,
-  "height":256,
-  "width":512,
+  "floor":120,
+  "height":128,
+  "width":256,
 
   "doors":[
 
