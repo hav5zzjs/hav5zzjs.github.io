@@ -7,7 +7,7 @@
   "width":128,
 
   "doors":[
-      { "area":"area1.json", "x":86, "new_x":42 }
+      { "area":"area1.json", "x":86, "new_x":12 }
 
   ]
 
