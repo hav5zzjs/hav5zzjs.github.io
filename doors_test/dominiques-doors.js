@@ -405,20 +405,20 @@ edges of the sprite image. */
             door.animation.mode = "play";
 
             //take out the check if pressed down and just go through the door automatically
-            if (controller.down.active) { controller.down.active = false;
+            //if (controller.down.active) { controller.down.active = false;
 
               //chaning this back since now only allowing entering doors from left
               game.dominique.x = door.new_x + 1;
               //when you enter first door (which has to be from left, you end up inside another door automatically and infinitely go)
               //game.dominique.x = door.new_x - 1;
               //if entering door from left, put player on right of new door
-             // if (game.dominique.velocity_x >0){ //enter door from left
-              //    game.dominque.x = door.new_x + Math.max(game.dominique.half_width,door.width) + 1
-              //}
-             // else if (game.dominque.velocity_x <0){ //enter door from right
-              //    game.dominique.x = door.new_x - Math.max(game.dominique.half_width,door.width) - 1
+              if (game.dominique.velocity_x >0){ //enter door from left
+                  game.dominque.x = door.new_x + Math.max(game.dominique.half_width,door.width) + 1
+              }
+              else if (game.dominque.velocity_x <0){ //enter door from right
+                  game.dominique.x = door.new_x - Math.max(game.dominique.half_width,door.width) - 1
                   //use the max width to displace player after entering door, otherwise will just go back through it
-             // }
+              }
 
 
               game.loadArea(door.area, game.reset);
