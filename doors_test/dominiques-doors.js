@@ -159,6 +159,7 @@ edges of the sprite image. */
     this.new_x = new_x;
     this.x = x;
     this.y = y;
+    this.width = 32; //door width, used for collision
 
   };
 
@@ -211,7 +212,7 @@ edges of the sprite image. */
               //walk left
               //new Frame(126,  0, 18, 30,  1), new Frame(144,  0, 18, 31,  1, -1), new Frame(162,  0, 19, 29, 2), new Frame(181,  0, 19, 30, 2),
               new Frame(126,  0, 18, 31, 0, -1), new Frame(144,  0, 18, 31,  1, -1), new Frame(162,  0, 19, 30, -1), new Frame(181,  0, 19, 29, -1,1),
-              //door
+              //door, note door width here is hard-coded, but should force door class to get the right answer from the sprite sheet
               new Frame(200,  0, 32, 32), new Frame(232,  0, 32, 32), new Frame(264,  0, 32, 32), new Frame(296,  0, 32, 32), new Frame(328,  0, 32, 32), new Frame(360,  0, 32, 32), new Frame(392,  0, 32, 32)],
 
       frame_set: {
@@ -399,7 +400,7 @@ edges of the sprite image. */
 
           let door = game.area.doors[index];
 
-          if (game.dominique.x > door.x && game.dominique.x < door.x + 32) {
+          if (game.dominique.x > door.x && game.dominique.x < door.x + door.width) {
 
             door.animation.mode = "play";
 
@@ -407,9 +408,19 @@ edges of the sprite image. */
            // if (controller.down.active) { controller.down.active = false;
 
               //chaning this back since now only allowing entering doors from left
-              game.dominique.x = door.new_x + 1;
+              //game.dominique.x = door.new_x + 1;
               //when you enter first door (which has to be from left, you end up inside another door automatically and infinitely go)
               //game.dominique.x = door.new_x - 1;
+              //if entering door from left, put player on right of new door
+              if (game.dominique.velocity_x >0){ //enter door from left
+                  game.dominque.x = door.new_x + Math.max(game.dominique.half_width,door.width) + 1
+              }
+              else if (game.dominque.velocity_x <0){ //enter door from right
+                  game.dominique.x = door.new_x - Math.max(game.dominique.half_width,door.width) - 1
+                  //use the max width to displace player after entering door, otherwise will just go back through it
+              }
+
+
               game.loadArea(door.area, game.reset);
 
               return;
@@ -475,7 +486,7 @@ edges of the sprite image. */
 
         let door = game.area.doors[index];
 
-        game.area.doors[index] = new Door(door.x, game.area.floor - 32 - 3, door.area, door.new_x);
+        game.area.doors[index] = new Door(door.x, game.area.floor - door.width - 3, door.area, door.new_x);
 
       }
 
