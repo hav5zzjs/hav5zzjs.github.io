@@ -1,6 +1,6 @@
 {
 
-  "message":"~The Giant Pointless Room~",
+  "message":"Zone2",
   "background_color":"#006666",
   "floor":250,
   "height":256,
@@ -8,7 +8,7 @@
 
   "doors":[
 
-    { "area":"area1.json", "x":48, "new_x":48 }
+    { "area":"area1.json", "x":0, "new_x":255 }
 
   ]
 
