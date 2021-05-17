@@ -152,14 +152,14 @@ edges of the sprite image. */
     //// GAME CLASSES ////
   //////////////////////
 
-  const Door = function(x, y, area, new_x) {
+  const Door = function(x, y, area, new_x, width=32) {
 
     this.animation = new Animation(display.sprite_sheet.frame_set.door, 5, "play");
     this.area = area;
     this.new_x = new_x;
     this.x = x;
     this.y = y;
-    this.width = 32; //door width, used for collision
+    this.width = width; //door width, used for collision
 
   };
 
