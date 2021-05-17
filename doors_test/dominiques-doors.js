@@ -414,7 +414,7 @@ edges of the sprite image. */
               //game.dominque.x = door.new_x + Math.max(game.dominique.half_width,door.width) + 1;
               //if entering door from left, put player on right of new door
               //if (game.dominique.velocity_x >0){ //enter door from left
-              if (controller.right.active) { //controller.right.active = false;
+              if (controller.right.active) { controller.right.active = false;
                   game.dominque.x = door.new_x + Math.max(game.dominique.half_width,32) + 1;
               }
               //else if (game.dominque.velocity_x <0){ //enter door from right
