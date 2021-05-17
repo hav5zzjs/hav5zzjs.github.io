@@ -152,7 +152,7 @@ edges of the sprite image. */
     //// GAME CLASSES ////
   //////////////////////
 
-  const Door = function(x, y, area, new_x, width=10,height=32) {
+  const Door = function(x, y, area, new_x, width=10,height=32,count=0) {
 
     this.animation = new Animation(display.sprite_sheet.frame_set.door, 5, "play");
     this.area = area;
@@ -161,7 +161,7 @@ edges of the sprite image. */
     this.y = y;
     this.width = width; //door width, used for collision
     this.height = height; //door height, used for collision
-
+    this.count = count; //check to see if we went through the door
   };
 
   Door.prototype = {
@@ -403,6 +403,11 @@ edges of the sprite image. */
 
           let door = game.area.doors[index];
 
+            if (door.count == 1){
+                door.count=0;
+                display.render();
+            }
+
           if (game.dominique.x > door.x && game.dominique.x < door.x + door.width) {
 
             door.animation.mode = "play";
@@ -427,7 +432,7 @@ edges of the sprite image. */
               }
 
                   game.loadArea(door.area, game.reset);
-
+                  door.count = 1;
                   return;
 
 
