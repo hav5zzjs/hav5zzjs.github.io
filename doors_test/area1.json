@@ -9,7 +9,7 @@
   "doors":[
 
     { "area":"area2.json", "x":48, "new_x":48 },
-    { "area":"area0.json", "x":0, "new_x":128 },
+    { "area":"area0.json", "x":0, "new_x":96 },
     { "area":"area3.json", "x":176, "new_x":16 }
 
   ]
