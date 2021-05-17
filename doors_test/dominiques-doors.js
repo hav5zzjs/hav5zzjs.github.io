@@ -202,10 +202,16 @@ edges of the sprite image. */
     height_width_ratio:undefined,
 
     sprite_sheet: {
-
+      // x, y , width , height, offset_x, offset_y
+      //why are the offsets needed?? I guess because she moves?
+      //I guess that the third frame moving left is not being set down? lets try increasing y offset
       frames:[new Frame(  0,  0, 27, 30), new Frame( 27,  0, 25, 30,  1),
+              //walk right
               new Frame( 52,  0, 19, 29, -1,  1), new Frame( 71,  0, 19, 30, -1), new Frame(90,  0, 18, 30), new Frame(108,  0, 18, 31, 0, -1),
-              new Frame(126,  0, 18, 30,  1), new Frame(144,  0, 18, 31,  1, -1), new Frame(162,  0, 19, 29, 2), new Frame(181,  0, 19, 30, 2),
+              //walk left
+              //new Frame(126,  0, 18, 30,  1), new Frame(144,  0, 18, 31,  1, -1), new Frame(162,  0, 19, 29, 2), new Frame(181,  0, 19, 30, 2),
+              new Frame(126,  0, 18, 31, 0, -1), new Frame(144,  0, 18, 31,  1, -1), new Frame(162,  0, 19, 30, -1), new Frame(181,  0, 19, 29, -1,1),
+              //door
               new Frame(200,  0, 32, 32), new Frame(232,  0, 32, 32), new Frame(264,  0, 32, 32), new Frame(296,  0, 32, 32), new Frame(328,  0, 32, 32), new Frame(360,  0, 32, 32), new Frame(392,  0, 32, 32)],
 
       frame_set: {
