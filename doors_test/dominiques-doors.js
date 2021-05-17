@@ -297,6 +297,7 @@ edges of the sprite image. */
       x:100,
       y:100,
 
+      //thats all the collision is? Just teleport the person back to the place you don't want it to go through?
       collideWorld:function() {
 
         if (this.x - this.half_width < 0) {
@@ -401,14 +402,15 @@ edges of the sprite image. */
 
             door.animation.mode = "play";
 
-            if (controller.down.active) { controller.down.active = false;
+            //take out the check if pressed down and just go through the door automatically
+           // if (controller.down.active) { controller.down.active = false;
 
               game.dominique.x = door.new_x + 1;
               game.loadArea(door.area, game.reset);
 
               return;
 
-            }
+            //}
 
           } else { door.animation.mode = "rewind"; }
 
