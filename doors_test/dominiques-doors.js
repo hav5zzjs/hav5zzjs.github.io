@@ -239,7 +239,7 @@ edges of the sprite image. */
       this.buffer.fillRect(0, 0, game.area.width, game.area.height);
 
       /*background image. */
-      /*var image;
+      var image;
       let image = new Image();
       image.addEventListener("load", function(event) {
       image = this;
@@ -250,8 +250,9 @@ edges of the sprite image. */
       continue;
       }
       else{
-      this.buffer.drawImage(image, 0, 0, image.width, image.height, x, 0, image.width, image.height);
-      }*/
+      //take the whole image and draw it in the top left hand corner using its full size
+      this.buffer.drawImage(image, 0, 0, image.width, image.height, 0, 0, image.width, image.height);
+      }
 
 
       /* Draw the floor. */
@@ -273,6 +274,8 @@ edges of the sprite image. */
 
       this.buffer.drawImage(this.sprite_sheet.image, frame.x, frame.y, frame.width, frame.height, Math.round(game.dominique.x) + frame.offset_x * 0.5 - frame.width * 0.5, Math.round(game.dominique.y) + frame.offset_y * 0.5 - frame.height * 0.5, frame.width, frame.height);
 
+
+      //here is where the canvas gets drawn -i.e. the background
       this.context.drawImage(this.buffer.canvas, 0, 0, game.area.width, game.area.height, 0, 0, this.context.canvas.width, this.context.canvas.height);
 
       this.context.fillStyle = "#ffffff";

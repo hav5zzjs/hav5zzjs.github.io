@@ -9,6 +9,9 @@
   display = document.querySelector("canvas").getContext("2d");
   images = new Array();// This will hold our loaded images.
 
+ var json;
+
+
   load1 = function() {
 
     let image = new Image();// First we must create a new Image object.
