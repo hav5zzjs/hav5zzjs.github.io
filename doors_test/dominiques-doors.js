@@ -24,14 +24,13 @@ edges of the sprite image. */
 
   /* We have to store the image and draw it whenever it loads, so let's make
   an event handler for the load event. */
-  image2.addEventListener("load", function(event) {
+  //image2.addEventListener("load", function(event) {
 
   /* When the image loads, we store it in the images array and draw it. */
-  image2 = this;
-  });
+  //image2 = this;
+  //});
   //actually tell it where to get the image
   image2.src = file;
-
   };
 
 
