@@ -247,7 +247,7 @@ edges of the sprite image. */
       });
       image.src = game.area.img;
       if(img.src=="None"){
-      continue;
+      //pass
       }
       else{
       //take the whole image and draw it in the top left hand corner using its full size
