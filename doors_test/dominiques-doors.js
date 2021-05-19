@@ -241,15 +241,16 @@ edges of the sprite image. */
       /*background image. */
       //allocate memory and instantiate Image object
       var image;
-      let image = new Image();
+      //let image = new Image();
       //add a listener to load the image - I don't think we need this?
       //image.addEventListener("load", function(event) {
       //image = this;
       //render();//this is probably bad since we are already in a function named render...
       //});
 
-      image.src = game.area.img;
-      if(image.src=="None"){
+      //image.src = "None";//game.area.img;
+      image = "None";//game.area.img;
+      if(image=="None"){
       //pass
       }
       else{
