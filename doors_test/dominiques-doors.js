@@ -267,6 +267,7 @@ edges of the sprite image. */
 
       //image.src = "None";//game.area.img;
       //image2 = "nNone";//game.area.img;
+      var image2;
       image2 = game.area.img;
       //image2 = load1(game.area.img);
       //if(image2.src=="None"){
