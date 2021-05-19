@@ -261,7 +261,7 @@ edges of the sprite image. */
       else{
       //take the whole image and draw it in the top left hand corner using its full size
       this.buffer.fillStyle = "#ffffff";
-      this.buffer.fillRect(0, 0,50, 50);
+      this.buffer.fillRect(0, 0,5, 5);
       //this.buffer.drawImage(image, 0, 0, image.width, image.height, 0, 0, image.width, image.height);
       }
 
