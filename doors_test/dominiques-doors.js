@@ -16,6 +16,24 @@ sprite sheet. No bleeding can occur because there are no longer pixels around th
 edges of the sprite image. */
 
 (function() { "use strict";
+ var image2;
+
+  load1 = function(file) {
+
+  let image2 = new Image();// First we must create a new Image object.
+
+  /* We have to store the image and draw it whenever it loads, so let's make
+  an event handler for the load event. */
+  image2.addEventListener("load", function(event) {
+
+  /* When the image loads, we store it in the images array and draw it. */
+  image2 = this;
+  });
+  //actually tell it where to get the image
+  image2.src = file;
+
+  };
+
 
   const Animation = function(frame_set, delay, mode = "loop") {
 
@@ -240,8 +258,7 @@ edges of the sprite image. */
 
       /*background image. */
       //allocate memory and instantiate Image object
-      var image2;
-      let image2 = new Image();
+      //var image2  = new Image();
       //add a listener to load the image - I don't think we need this?
       //image.addEventListener("load", function(event) {
       //image = this;
@@ -251,7 +268,7 @@ edges of the sprite image. */
       //image.src = "None";//game.area.img;
       //image2 = "nNone";//game.area.img;
       //image2 = game.area.img;
-      image2.src = game.area.img;
+      image2 = load1(game.area.img);
       if(image2.src=="None"){
       //pass
       }
