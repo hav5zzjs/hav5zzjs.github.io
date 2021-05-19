@@ -17,24 +17,6 @@ edges of the sprite image. */
 
 (function() { "use strict";
 
-  var load1, image2;
-  const load1 = function(file) {
-
-  let image2 = new Image();// First we must create a new Image object.
-
-  /* We have to store the image and draw it whenever it loads, so let's make
-  an event handler for the load event. */
-  image2.addEventListener("load", function(event) {
-
-  /* When the image loads, we store it in the images array and draw it. */
-  image2 = this;
-      this.buffer.drawImage(image, 0, 0, image.width, image.height, 0, 0, image.width, image.height);
-  });
-  //actually tell it where to get the image
-  image2.src = file;
-  };
-
-
   const Animation = function(frame_set, delay, mode = "loop") {
 
     this.count       = 0;
