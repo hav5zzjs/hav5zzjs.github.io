@@ -242,29 +242,21 @@ edges of the sprite image. */
       //allocate memory and instantiate Image object
       var image2;
       image2  = new Image();
-      //add a listener to load the image - I don't think we need this?
-      //image.addEventListener("load", function(event) {
-      //image = this;
-      //render();//this is probably bad since we are already in a function named render...
-      //});
 
-      //image.src = "None";//game.area.img;
-      //image2 = "nNone";//game.area.img;
-      //var image2;
       image2.src = game.area.img;
-      //image2 = load1(game.area.img);
       if(image2.src=="None"){
-      //if(game.area.img=="None"){
-      //if(image2=="None"){
       //pass
       }
       else{
       //take the whole image and draw it in the top left hand corner using its full size
-      this.buffer.fillStyle = "#ffffff";
-      this.buffer.fillRect(0, 0,5, 5);
+      //this.buffer.fillStyle = "#ffffff";
+      //this.buffer.fillRect(0, 0,5, 5);
       this.buffer.drawImage(image2, 0, 0, image2.width, image2.height, 0, 0, image2.width, image2.height);
       }
 
+      /*draw the "ceiling"*/
+      this.buffer.fillStyle = "#009999";
+      this.buffer.fillRect(0, 0, game.area.width, game.area.floor + 3);
 
       /* Draw the floor. */
       this.buffer.fillStyle = "#373641";
@@ -289,10 +281,11 @@ edges of the sprite image. */
       //here is where the canvas gets drawn -i.e. the background
       this.context.drawImage(this.buffer.canvas, 0, 0, game.area.width, game.area.height, 0, 0, this.context.canvas.width, this.context.canvas.height);
 
-      this.context.fillStyle = "#ffffff";
+      //this.context.fillStyle = "#ffffff"; //white
+      this.context.fillStyle = "#e6b800"; //gold
       this.context.font = "20px Arial";
-      //this.context.fillText(game.area.message, 10, 20);
-      this.context.fillText(game.area.img, 10, 20);
+      this.context.fillText(game.area.message, 10, 20);
+      //this.context.fillText(game.area.img, 10, 20);
 
     },
 
