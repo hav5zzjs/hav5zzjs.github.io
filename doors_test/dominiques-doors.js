@@ -284,8 +284,8 @@ edges of the sprite image. */
       //this.context.fillStyle = "#ffffff"; //white
       this.context.fillStyle = "#e6b800"; //gold
       this.context.font = "20px Arial";
-      this.context.shadowColor="black";
-      this.context.shadowBlur=5;
+      this.context.shadowColor="#997a00";
+      this.context.shadowBlur=1;
       this.context.fillText(game.area.message, 10, 20);
       //this.context.fillText(game.area.img, 10, 20);
 
