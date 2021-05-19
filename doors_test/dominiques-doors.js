@@ -249,7 +249,7 @@ edges of the sprite image. */
       //});
 
       //image.src = "None";//game.area.img;
-      image2 = "None";//game.area.img;
+      image2 = "nNone";//game.area.img;
       if(image2=="None"){
       //pass
       }
