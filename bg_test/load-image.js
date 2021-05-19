@@ -9,7 +9,8 @@
   display = document.querySelector("canvas").getContext("2d");
   images = new Array();// This will hold our loaded images.
 
- var json;
+  //read the json
+  var json;
 
 
   load1 = function() {
@@ -25,7 +26,7 @@
       render();
 
     });
-
+    //actually tell it where to get the image
     image.src = "drag.png";
 
   };

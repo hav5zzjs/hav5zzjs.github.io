@@ -1,0 +1,14 @@
+{
+
+  "message":"Start",
+  "background_color":"#052623",
+  "floor":120,
+  "height":128,
+  "width":256,
+
+  "doors":[
+      { "area":"area1.json", "x":245, "new_x":11 }
+  ],
+  "img":"None"
+
+}

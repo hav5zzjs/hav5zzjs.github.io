@@ -246,12 +246,14 @@ edges of the sprite image. */
       render();
       });
       image.src = game.area.img;
-      if(img.src=="None"){
+      if(image.src=="None"){
       //pass
       }
       else{
       //take the whole image and draw it in the top left hand corner using its full size
-      this.buffer.drawImage(image, 0, 0, image.width, image.height, 0, 0, image.width, image.height);
+      this.buffer.fillStyle = "#373641";
+      this.buffer.fillRect(0, 0, game.area.width, game.area.height);
+      //this.buffer.drawImage(image, 0, 0, image.width, image.height, 0, 0, image.width, image.height);
       }
 
 
