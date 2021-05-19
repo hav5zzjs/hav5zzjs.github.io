@@ -239,14 +239,19 @@ edges of the sprite image. */
       this.buffer.fillRect(0, 0, game.area.width, game.area.height);
 
       /*background image. */
-      let image = new Image();
+      /*let image = new Image();
       image.addEventListener("load", function(event) {
       image = this;
       render();
       });
       image.src = game.area.img;
+      if(img.src=="None"){
+      continue;
+      }
+      else{
       this.buffer.drawImage(image, 0, 0, image.width, image.height, x, 0, image.width, image.height);
-
+      }
+      */
 
       /* Draw the floor. */
       this.buffer.fillStyle = "#373641";

@@ -9,6 +9,7 @@
   "doors":[
       { "area":"area2.json", "x":11, "new_x":245 },
       { "area":"area4.json", "x":245, "new_x":11 }
-  ]
+  ],
+  "img":"drag.png"
 
 }
