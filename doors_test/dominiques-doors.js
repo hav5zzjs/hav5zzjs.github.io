@@ -238,6 +238,16 @@ edges of the sprite image. */
       this.buffer.fillStyle = game.area.background_color;
       this.buffer.fillRect(0, 0, game.area.width, game.area.height);
 
+      /*background image. */
+      let image = new Image();
+      image.addEventListener("load", function(event) {
+      image = this;
+      render();
+      });
+      image.src = game.area.img;
+      this.buffer.drawImage(image, 0, 0, image.width, image.height, x, 0, image.width, image.height);
+
+
       /* Draw the floor. */
       this.buffer.fillStyle = "#373641";
       this.buffer.fillRect(0, game.area.floor - 3, game.area.width, game.area.height - game.area.floor + 3);
@@ -421,7 +431,7 @@ edges of the sprite image. */
               //if entering door from left, put player on right of new door
               //if (game.dominique.velocity_x >0){ //enter door from left
               if (controller.right.active) { controller.right.active = false;
-                  game.dominque.x = door.new_x + game.dominique.half_width+2*door.width + 1;
+                  game.dominque.x = door.new_x + game.dominique.half_width+door.width + 1;
 
               }
               //else if (game.dominque.velocity_x <0){ //enter door from right
