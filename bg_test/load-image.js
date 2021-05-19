@@ -160,15 +160,8 @@
 
   resize();
 
-  load0();
+  //load0();
   load1();
   load2();
-
-  /* The code below sets the source of a new image directly to an inline base64 string.
-  This means no loading even occurs, the image data is just there. This is the data
-  from the human.png file. */
-  /* images[0] = new Image();
-  images[0].src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAzQDNAM2UZCwLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QwXDhkbAgmtXgAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAF3SURBVDjLfZO/S8NAFMc/VzqkkKGr4FC0Q8AlkM6C4Ogf4NC5imPt4OCm6Ohmq1NxcnBwCKJQFFdpMGMHfxUcHIQKFnrbOcQ7r03iQQjvve/3+773Hicqno99NhfeFTln5+pTzOJN4m0Qs7vi5pIB3JJD52VepAQ02S05ueTxRGaKFN8GcQqU1z2rXpgFtdqXtNqXuCUH25EmjyeS+tyTyRf1FWxQ2Vvla9AzIB13muspF8bB/t1YbB+d/zdDNg66AEIP3QhEUTQFtLtnxXu33+zoLURRRBAEpjiKQyWc7G2UvVUBGPKhUggIgMRBv4ECWNwKU+Tn4zUAaqfJFbhW0O1S1ABNBnDu18gxQb+Bqp0iGAJDKEDEKA5VtdlDWgOWkqlY56rNHqM4NM2MAyUl9QdfXCzHqnSW0TmA+oMvHqVMyK83uhTY9iBAEaBYsr7fXL9hKTZOkr/9uiqe/yegBQEjMnMqnj/9GpNdoXCAD/5eXUZO834AfkujNjeRqMcAAAAASUVORK5CYII=";
-  render(); */
 
 })();
