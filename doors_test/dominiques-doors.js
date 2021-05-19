@@ -417,10 +417,10 @@ edges of the sprite image. */
         for (let index = game.area.doors.length - 1; index > -1; -- index) {
 
           let door = game.area.doors[index];
-
+            /*this should work since there are only 2 doors per level*/
             if (door.count == 1){
                 door.count=0;
-                display.render();
+                return;//display.render();
             }
 
           if (game.dominique.x > door.x && game.dominique.x < door.x + door.width) {
