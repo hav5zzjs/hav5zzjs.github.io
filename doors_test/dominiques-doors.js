@@ -239,7 +239,8 @@ edges of the sprite image. */
       this.buffer.fillRect(0, 0, game.area.width, game.area.height);
 
       /*background image. */
-      /*let image = new Image();
+      var image;
+      let image = new Image();
       image.addEventListener("load", function(event) {
       image = this;
       render();
@@ -251,7 +252,7 @@ edges of the sprite image. */
       else{
       this.buffer.drawImage(image, 0, 0, image.width, image.height, x, 0, image.width, image.height);
       }
-      */
+
 
       /* Draw the floor. */
       this.buffer.fillStyle = "#373641";
@@ -324,25 +325,7 @@ edges of the sprite image. */
 
         } else if (this.x + this.half_width > game.area.width) {
 
-          //this is funny, but taking it out
-          //if (game.area.message != "~The Passageway~") {
-
             this.x = game.area.width - this.half_width;
-
-         //} else if (this.x - this.half_width > game.area.width) {
-
-         //  game.engine.stop();
-         //  controller.right.active = false;
-
-         //  game.loadArea("area0.json", function() {
-
-         //    game.reset();
-
-         //  });
-
-         //  alert("Dominique escaped the weird program full of pointless rooms and doors. She went to a much better, more interesting program.");
-
-         //}
 
         }
         //if we are not jumping and not on the floor, go to the floor
@@ -431,15 +414,10 @@ edges of the sprite image. */
             //if (controller.down.active) { controller.down.active = false;
 
               //chaning this back since now only allowing entering doors from left
-              //game.dominique.x = door.new_x + 1;
-              //game.dominque.x = door.new_x + Math.max(game.dominique.half_width,door.width) + 1;
-              //if entering door from left, put player on right of new door
-              //if (game.dominique.velocity_x >0){ //enter door from left
               if (controller.right.active) { controller.right.active = false;
                   game.dominique.x = door.new_x + game.dominique.half_width+door.width + 1;
 
               }
-              //else if (game.dominque.velocity_x <0){ //enter door from right
               if (controller.left.active) { controller.left.active = false;
                   game.dominique.x = door.new_x - game.dominique.half_width-door.width - 1;
                   //use the max width to displace player after entering door, otherwise will just go back through it
