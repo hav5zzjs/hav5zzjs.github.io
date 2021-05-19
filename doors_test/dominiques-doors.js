@@ -253,8 +253,8 @@ edges of the sprite image. */
       //var image2;
       image2.src = game.area.img;
       //image2 = load1(game.area.img);
-      //if(image2.src=="None"){
-      if(game.area.img=="None"){
+      if(image2.src=="None"){
+      //if(game.area.img=="None"){
       //if(image2=="None"){
       //pass
       }
@@ -262,7 +262,7 @@ edges of the sprite image. */
       //take the whole image and draw it in the top left hand corner using its full size
       this.buffer.fillStyle = "#ffffff";
       this.buffer.fillRect(0, 0,5, 5);
-      //this.buffer.drawImage(image, 0, 0, image.width, image.height, 0, 0, image.width, image.height);
+      this.buffer.drawImage(image2, 0, 0, image2.width, image2.height, 0, 0, image2.width, image2.height);
       }
 
 
