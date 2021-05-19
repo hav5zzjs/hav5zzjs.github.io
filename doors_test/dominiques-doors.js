@@ -253,7 +253,8 @@ edges of the sprite image. */
       //var image2;
       image2.src = game.area.img;
       //image2 = load1(game.area.img);
-      if(image2.src=="None"){
+      //if(image2.src=="None"){
+      if(game.area.img=="None"){
       //if(image2=="None"){
       //pass
       }
@@ -290,7 +291,8 @@ edges of the sprite image. */
 
       this.context.fillStyle = "#ffffff";
       this.context.font = "20px Arial";
-      this.context.fillText(game.area.message, 10, 20);
+      //this.context.fillText(game.area.message, 10, 20);
+      this.context.fillText(game.area.img, 10, 20);
 
     },
 
