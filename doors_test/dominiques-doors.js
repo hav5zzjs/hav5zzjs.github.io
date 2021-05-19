@@ -239,7 +239,7 @@ edges of the sprite image. */
       this.buffer.fillRect(0, 0, game.area.width, game.area.height);
 
       /*background image. */
-      var image;
+      /*var image;
       let image = new Image();
       image.addEventListener("load", function(event) {
       image = this;
@@ -251,7 +251,7 @@ edges of the sprite image. */
       }
       else{
       this.buffer.drawImage(image, 0, 0, image.width, image.height, x, 0, image.width, image.height);
-      }
+      }*/
 
 
       /* Draw the floor. */
