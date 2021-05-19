@@ -16,10 +16,10 @@ sprite sheet. No bleeding can occur because there are no longer pixels around th
 edges of the sprite image. */
 
 (function() { "use strict";
- var image2;
 
-  load1 = function(file) {
+  const load1 = function(file) {
 
+  var image2;
   let image2 = new Image();// First we must create a new Image object.
 
   /* We have to store the image and draw it whenever it loads, so let's make
