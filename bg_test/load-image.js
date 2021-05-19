@@ -27,7 +27,7 @@
 
     });
     //actually tell it where to get the image
-    image.src = "drag.png";
+    image.src = "hitw.png";
 
   };
 
