@@ -24,11 +24,12 @@ edges of the sprite image. */
 
   /* We have to store the image and draw it whenever it loads, so let's make
   an event handler for the load event. */
-  //image2.addEventListener("load", function(event) {
+  image2.addEventListener("load", function(event) {
 
   /* When the image loads, we store it in the images array and draw it. */
-  //image2 = this;
-  //});
+  image2 = this;
+      //this.buffer.drawImage(image, 0, 0, image.width, image.height, 0, 0, image.width, image.height);
+  });
   //actually tell it where to get the image
   image2.src = file;
   };
@@ -266,9 +267,10 @@ edges of the sprite image. */
 
       //image.src = "None";//game.area.img;
       //image2 = "nNone";//game.area.img;
-      //image2 = game.area.img;
-      image2 = load1(game.area.img);
-      if(image2.src=="None"){
+      image2 = game.area.img;
+      //image2 = load1(game.area.img);
+      //if(image2.src=="None"){
+      if(image2=="None"){
       //pass
       }
       else{
