@@ -7,7 +7,7 @@
   "width":256,
 
   "doors":[
-      { "area":"area5.json", "x":11, "new_x":245 },
+      { "area":"area5.json", "x":11, "new_x":245 }
   ],
   "img":"fireworks.png"
 
