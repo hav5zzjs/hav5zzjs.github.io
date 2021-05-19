@@ -1,0 +1,14 @@
+{
+
+  "message":"Zone4",
+  "background_color":"#003333",
+  "floor":120,
+  "height":128,
+  "width":256,
+
+  "doors":[
+      { "area":"area3.json", "x":11, "new_x":245 },
+      { "area":"area5.json", "x":245, "new_x":11 }
+  ]
+
+}
