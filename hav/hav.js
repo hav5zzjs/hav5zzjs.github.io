@@ -251,7 +251,7 @@ edges of the sprite image. */
           this.context.fillText(txt.charAt(this.i),x+2*this.i,y);
           this.context.fillText(txt.charAt(this.i+wrap),x+2*this.i,y2);
           this.i++;
-          setTimeout(this.typeWriter.bind(null, txt), speed);
+          setTimeout(typeWriter.bind(null, txt), speed);
           }
 
     }
@@ -259,7 +259,7 @@ edges of the sprite image. */
       if (this.i < txt.length) {
           context.fillText(txt.charAt(this.i),x+2*this.i,y);
           this.i++;
-          setTimeout(this.typeWriter.bind(null, txt), speed);
+          setTimeout(typeWriter.bind(null, txt), speed);
           }
     }
     },
