@@ -243,8 +243,8 @@ edges of the sprite image. */
     //assume text is short enough that we only wrap once, easily generalizable with for loop over wrap*j
     if(wrap>0){
        if (i < wrap) {
-          context.fillText(txt.charAt(i),x,y);
-          context.fillText(txt.charAt(i+wrap),x,y2);
+          context.fillText(txt.charAt(i),x+2*i,y);
+          context.fillText(txt.charAt(i+wrap),x+2*i,y2);
           i++;
           setTimeout(typeWriter.bind(null, context,txt), speed);
           }
@@ -252,7 +252,7 @@ edges of the sprite image. */
     }
     else{
       if (i < txt.length) {
-          context.fillText(txt.charAt(i),x,y);
+          context.fillText(txt.charAt(i),x+2*i,y);
           i++;
           setTimeout(typeWriter.bind(null, context,txt), speed);
           }
