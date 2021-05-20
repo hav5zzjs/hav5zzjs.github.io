@@ -5,11 +5,11 @@
   "background_color":"#202830",
   "floor":120,
   "height":132,
-  "width":256,
+  "width":236,
 
   "doors":[
       { "area":"area1.json", "x":11, "new_x":265 },
-      { "area":"area3.json", "x":240, "new_x":11 }
+      { "area":"area3.json", "x":220, "new_x":11 }
   ],
   "img":"funnel.png"
 }

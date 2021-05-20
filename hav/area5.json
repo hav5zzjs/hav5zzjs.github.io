@@ -2,13 +2,13 @@
 
   "message":"(Re)discovering liquid (green?) gold at Cheeseboard...",
   "background_color":"#202830",
-  "floor":120,
+  "floor":126,
   "height":132,
   "width":226,
 
   "doors":[
       { "area":"area4.json", "x":11, "new_x":215 },
-      { "area":"area6.json", "x":215, "new_x":11 }
+      { "area":"area6.json", "x":210, "new_x":11 }
   ],
   "img":"cheeseboard.png"
 

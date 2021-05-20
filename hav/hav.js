@@ -327,7 +327,12 @@ edges of the sprite image. */
 
       //this.context.fillStyle = "#ffffff"; //white
       this.context.fillStyle = "#e6b800"; //gold
+      if(game.area.img == "None"){
+      this.context.font = "16px Arial";
+      }
+      else{
       this.context.font = "20px Arial";
+      }
       //this.context.shadowColor="#ffffff";//"#997a00";
       //this.context.shadowBlur=1;
       //wrap(game.area.message,64);
