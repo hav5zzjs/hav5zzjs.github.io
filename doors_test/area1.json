@@ -4,11 +4,11 @@
   "background_color":"#202830",
   "floor":120,
   "height":132,
-  "width":256,
+  "width":276,
 
   "doors":[
-      { "area":"area0.json", "x":11, "new_x":245 },
-      { "area":"area2.json", "x":245, "new_x":11 }
+      { "area":"area0.json", "x":11, "new_x":265 },
+      { "area":"area2.json", "x":265, "new_x":11 }
   ],
 
   "img":"hitw2.png"
