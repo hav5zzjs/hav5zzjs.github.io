@@ -17,6 +17,11 @@ edges of the sprite image. */
 
 (function() { "use strict";
 
+// Dynamic Width (Build Regex)
+  const wrap = (s, w) => s.replace(
+    new RegExp(`(?![^\\n]{1,${w}}$)([^\\n]{1,${w}})\\s`, 'g'), '$1\n'
+  );
+
   const Animation = function(frame_set, delay, mode = "loop") {
 
     this.count       = 0;
@@ -259,7 +264,7 @@ edges of the sprite image. */
 
       /*draw the "ceiling" with same thickness as floor*/
       this.buffer.fillStyle = "#004d4d";
-      this.buffer.fillRect(0, 0, game.area.width, game.area.height-game.area.floor+3);
+      this.buffer.fillRect(0, 0, game.area.width, game.area.height-game.area.floor+12);
 
       /* Draw the floor. */
       this.buffer.fillStyle = "#373641";
@@ -287,8 +292,9 @@ edges of the sprite image. */
       //this.context.fillStyle = "#ffffff"; //white
       this.context.fillStyle = "#e6b800"; //gold
       this.context.font = "20px Arial";
-      this.context.shadowColor="#ffffff";//"#997a00";
-      this.context.shadowBlur=1;
+      //this.context.shadowColor="#ffffff";//"#997a00";
+      //this.context.shadowBlur=1;
+      wrap(game.area.message,64);
       this.context.fillText(game.area.message, 10, 20);
       //this.context.fillText(game.area.img, 10, 20);
 
