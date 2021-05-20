@@ -237,7 +237,7 @@ edges of the sprite image. */
 
     },
 
-
+/*
     typeWriter:function(txt,speed=50,x=10,y=20,wrap=0,y2=30){
     //if(i == null){
     //var i;
@@ -263,7 +263,7 @@ edges of the sprite image. */
           }
     }
     },
-
+*/
 
 
     render:function() {
@@ -331,10 +331,10 @@ edges of the sprite image. */
       //this.context.shadowColor="#ffffff";//"#997a00";
       //this.context.shadowBlur=1;
       //wrap(game.area.message,64);
-      //this.context.fillText(game.area.message, 10, 20);
+      this.context.fillText(game.area.message, 10, 20);
       //this.context.fillText(game.area.img, 10, 20);
-      this.i=0;
-      this.typeWriter(game.area.message);
+      //this.i=0;
+      //this.typeWriter(game.area.message);
       },
 
     resize:function(event) {
