@@ -237,24 +237,28 @@ edges of the sprite image. */
     },
 
 
-   typeWriter:function typeWriter(context,txt,speed=50,x=10,y=20,wrap=0,y2=30){
+   typeWriter:function typeWriter(txt,speed=50,x=10,y=20,wrap=0,y2=30){
     var i;
     i = 0;
     //assume text is short enough that we only wrap once, easily generalizable with for loop over wrap*j
     if(wrap>0){
        if (i < wrap) {
-          context.fillText(txt.charAt(i),x,y);
-          context.fillText(txt.charAt(i+wrap),x,y2);
+          //here "this" is display
+          this.context.fillText(txt.charAt(i),x,y);
+          this.context.fillText(txt.charAt(i+wrap),x,y2);
           i++;
-          setTimeout(typeWriter.bind(null, context,txt), speed);
+          //try modern usage of setTimeout
+          setTimeout(() => {  this.typeWriter.bind(null,txt);); }, speed);
+          //setTimeout(this.typeWriter.bind(null, txt), speed);
           }
 
     }
     else{
       if (i < txt.length) {
-          context.fillText(txt.charAt(i),x,y);
+          this.context.fillText(txt.charAt(i),x,y);
           i++;
-          setTimeout(typeWriter.bind(null, context,txt), speed);
+          setTimeout(() => {  this.typeWriter.bind(null,txt);); }, speed);
+          //setTimeout(this.typeWriter.bind(null, txt), speed);
           }
     }
     },
@@ -328,7 +332,7 @@ edges of the sprite image. */
       //wrap(game.area.message,64);
       //this.context.fillText(game.area.message, 10, 20);
       //this.context.fillText(game.area.img, 10, 20);
-      this.typeWriter(this.context,game.area.message);
+      this.typeWriter(game.area.message);
       },
 
     resize:function(event) {
