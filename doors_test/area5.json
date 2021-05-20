@@ -4,11 +4,11 @@
   "background_color":"#202830",
   "floor":120,
   "height":132,
-  "width":256,
+  "width":226,
 
   "doors":[
-      { "area":"area4.json", "x":11, "new_x":245 },
-      { "area":"area6.json", "x":245, "new_x":11 }
+      { "area":"area4.json", "x":11, "new_x":225 },
+      { "area":"area6.json", "x":225, "new_x":11 }
   ],
   "img":"cheeseboard.png"
 

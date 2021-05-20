@@ -4,10 +4,10 @@
   "background_color":"#202830",
   "floor":120,
   "height":132,
-  "width":256,
+  "width":216,
 
   "doors":[
-      { "area":"area5.json", "x":11, "new_x":245 }
+      { "area":"area5.json", "x":11, "new_x":205 }
   ],
   "img":"fireworks.png"
 
