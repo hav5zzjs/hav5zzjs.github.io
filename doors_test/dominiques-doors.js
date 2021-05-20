@@ -17,27 +17,7 @@ edges of the sprite image. */
 
 (function() { "use strict";
 
-const function typeWriter(context,txt,speed=50,x=10,y=20,wrap=0,y2=30){
-    var i;
-    i = 0;
-    //assume text is short enough that we only wrap once, easily generalizable with for loop over wrap*j
-    if(wrap>0){
-       if (i < wrap) {
-          context.fillText(txt.charAt(i),x,y);
-          context.fillText(txt.charAt(i+wrap),x,y2);
-          i++;
-          setTimeout(typeWriter, speed);
-          }
 
-    }
-    else{
-      if (i < txt.length) {
-          context.fillText(txt.charAt(i),x,y);
-          i++;
-          setTimeout(typeWriter, speed);
-          }
-    }
-};
 
 
   const Animation = function(frame_set, delay, mode = "loop") {
@@ -256,6 +236,31 @@ const function typeWriter(context,txt,speed=50,x=10,y=20,wrap=0,y2=30){
 
     },
 
+
+   typeWriter:function typeWriter(context,txt,speed=50,x=10,y=20,wrap=0,y2=30){
+    var i;
+    i = 0;
+    //assume text is short enough that we only wrap once, easily generalizable with for loop over wrap*j
+    if(wrap>0){
+       if (i < wrap) {
+          context.fillText(txt.charAt(i),x,y);
+          context.fillText(txt.charAt(i+wrap),x,y2);
+          i++;
+          setTimeout(typeWriter, speed);
+          }
+
+    }
+    else{
+      if (i < txt.length) {
+          context.fillText(txt.charAt(i),x,y);
+          i++;
+          setTimeout(typeWriter, speed);
+          }
+    }
+    },
+
+
+
     render:function() {
 
       var frame;
@@ -323,7 +328,7 @@ const function typeWriter(context,txt,speed=50,x=10,y=20,wrap=0,y2=30){
       //wrap(game.area.message,64);
       //this.context.fillText(game.area.message, 10, 20);
       //this.context.fillText(game.area.img, 10, 20);
-      typeWriter(this.context,game.area.message);
+      this.typeWriter(this.context,game.area.message);
           },
 
     resize:function(event) {
