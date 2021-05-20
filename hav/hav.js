@@ -332,6 +332,7 @@ edges of the sprite image. */
       //this.context.shadowBlur=1;
       //wrap(game.area.message,64);
       this.context.fillText(game.area.message, 10, 20);
+      this.context.fillText(game.area.message2, 10, 40);
       //this.context.fillText(game.area.img, 10, 20);
       //this.i=0;
       //this.typeWriter(game.area.message);
