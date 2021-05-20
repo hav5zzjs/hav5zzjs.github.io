@@ -1,0 +1,14 @@
+{
+
+  "message":"Hi! As you know my memory is not the best, but there are a few of my favorite memories we had together that I can revisit in my head whenever I want since I was so happy during them. Walk to the right to check them out!",
+  "background_color":"#202830",
+  "floor":120,
+  "height":132,
+  "width":256,
+
+  "doors":[
+      { "area":"area1.json", "x":245, "new_x":11 }
+  ],
+  "img":"None"
+
+}
