@@ -332,7 +332,7 @@ edges of the sprite image. */
       //wrap(game.area.message,64);
       //this.context.fillText(game.area.message, 10, 20);
       //this.context.fillText(game.area.img, 10, 20);
-      this.typeWriter(this.context,game.area.message);
+      this.typeWriter(game.area.message);
       },
 
     resize:function(event) {
