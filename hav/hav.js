@@ -237,7 +237,7 @@ edges of the sprite image. */
     },
 
 
-   typeWriter:function typeWriter(context,txt,speed=50,x=10,y=20,wrap=0,y2=30){
+    typeWriter:function (txt,speed=50,x=10,y=20,wrap=0,y2=30){
     if(i == null){
     var i;
     i = 0;
@@ -247,10 +247,10 @@ edges of the sprite image. */
     //assume text is short enough that we only wrap once, easily generalizable with for loop over wrap*j
     if(wrap>0){
        if (i < wrap) {
-          context.fillText(txt.charAt(i),x+2*i,y);
-          context.fillText(txt.charAt(i+wrap),x+2*i,y2);
+          this.context.fillText(txt.charAt(i),x+2*i,y);
+          this.context.fillText(txt.charAt(i+wrap),x+2*i,y2);
           i++;
-          setTimeout(typeWriter.bind(null, context,txt), speed);
+          setTimeout(typeWriter.bind(null, this.context,txt), speed);
           }
 
     }
@@ -258,7 +258,7 @@ edges of the sprite image. */
       if (i < txt.length) {
           context.fillText(txt.charAt(i),x+2*i,y);
           i++;
-          setTimeout(typeWriter.bind(null, context,txt), speed);
+          setTimeout(typeWriter.bind(null, this.context,txt), speed);
           }
     }
     },
