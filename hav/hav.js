@@ -205,6 +205,7 @@ edges of the sprite image. */
     buffer:document.createElement("canvas").getContext("2d"),
     context:document.querySelector("canvas").getContext("2d"),
     height_width_ratio:undefined,
+    i:0
 
     sprite_sheet: {
       // x, y , width , height, offset_x, offset_y
@@ -238,26 +239,26 @@ edges of the sprite image. */
 
 
     typeWriter:function(txt,speed=50,x=10,y=20,wrap=0,y2=30){
-    if(i == null){
-    var i;
-    i = 0;
-    }
+    //if(i == null){
+    //var i;
+    //i = 0;
+    //}
     //var i;
     //i = 0;
     //assume text is short enough that we only wrap once, easily generalizable with for loop over wrap*j
     if(wrap>0){
-       if (i < wrap) {
-          this.context.fillText(txt.charAt(i),x+2*i,y);
-          this.context.fillText(txt.charAt(i+wrap),x+2*i,y2);
-          i++;
+       if (this.i < wrap) {
+          this.context.fillText(txt.charAt(this.i),x+2*this.i,y);
+          this.context.fillText(txt.charAt(this.i+wrap),x+2*this.i,y2);
+          this.i++;
           setTimeout(this.typeWriter.bind(null, this.context,txt), speed);
           }
 
     }
     else{
-      if (i < txt.length) {
-          context.fillText(txt.charAt(i),x+2*i,y);
-          i++;
+      if (this.i < txt.length) {
+          context.fillText(txt.charAt(this.i),x+2*this.i,y);
+          this.i++;
           setTimeout(this.typeWriter.bind(null, this.context,txt), speed);
           }
     }
@@ -332,6 +333,7 @@ edges of the sprite image. */
       //wrap(game.area.message,64);
       //this.context.fillText(game.area.message, 10, 20);
       //this.context.fillText(game.area.img, 10, 20);
+      this.i=0;
       this.typeWriter(game.area.message);
       },
 
