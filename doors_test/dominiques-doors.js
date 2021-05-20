@@ -207,12 +207,15 @@ edges of the sprite image. */
       // x, y , width , height, offset_x, offset_y
       //why are the offsets needed?? I guess because she moves?
       //I guess that the third frame moving left is not being set down? lets try increasing y offset
-      frames:[new Frame(  0,  0, 27, 30), new Frame( 27,  0, 25, 30,  1),
+      frames:[//new Frame(  0,  0, 27, 30), new Frame( 27,  0, 25, 30,  1),
+              new Frame(  0,  64, 45, 30), new Frame( 45,  64, 42, 30,  1),
               //walk right
-              new Frame( 52,  0, 19, 29, -1,  1), new Frame( 71,  0, 19, 30, -1), new Frame(90,  0, 18, 30), new Frame(108,  0, 18, 31, 0, -1),
+              //new Frame( 52,  0, 19, 29, -1,  1), new Frame( 71,  0, 19, 30, -1), new Frame(90,  0, 18, 30), new Frame(108,  0, 18, 31, 0, -1),
+              new Frame( 87,  64, 33, 29, -1,  1), new Frame( 121, 64, 33, 30, -1), new Frame(155,  64, 33, 30), new Frame(189,  64, 31, 31, 0, -1),
               //walk left
               //new Frame(126,  0, 18, 30,  1), new Frame(144,  0, 18, 31,  1, -1), new Frame(162,  0, 19, 29, 2), new Frame(181,  0, 19, 30, 2),
-              new Frame(126,  0, 18, 31, 0, -1), new Frame(144,  0, 18, 31,  1, -1), new Frame(162,  0, 19, 30, -1), new Frame(181,  0, 19, 29, -1,1),
+              //new Frame(126,  0, 18, 31, 0, -1), new Frame(144,  0, 18, 31,  1, -1), new Frame(162,  0, 19, 30, -1), new Frame(181,  0, 19, 29, -1,1),
+              new Frame(221,  64, 34, 31, 0, -1), new Frame(256,  64, 33, 31,  1, -1), new Frame(291,  64, 32, 30, -1), new Frame(326,  64, 32, 29, -1,1),
               //door, note door width here is hard-coded, but should force door class to get the right answer from the sprite sheet
               //new Frame(200,  0, 32, 32), new Frame(232,  0, 32, 32), new Frame(264,  0, 32, 32), new Frame(296,  0, 32, 32), new Frame(328,  0, 32, 32), new Frame(360,  0, 32, 32), new Frame(392,  0, 32, 32)],
               new Frame(200,  0, 10, 32), new Frame(232,  0, 10, 32), new Frame(264,  0, 10, 32), new Frame(296,  0, 10, 32), new Frame(328,  0, 10, 32), new Frame(360,  0, 10, 32), new Frame(392,  0, 10, 32)],
@@ -284,7 +287,7 @@ edges of the sprite image. */
       //this.context.fillStyle = "#ffffff"; //white
       this.context.fillStyle = "#e6b800"; //gold
       this.context.font = "20px Arial";
-      this.context.shadowColor="#997a00";
+      this.context.shadowColor="#ffffff";//"#997a00";
       this.context.shadowBlur=1;
       this.context.fillText(game.area.message, 10, 20);
       //this.context.fillText(game.area.img, 10, 20);
@@ -530,8 +533,8 @@ edges of the sprite image. */
 
   });
 
-  //display.sprite_sheet.image.src = "dominiques-doors.png";
-  display.sprite_sheet.image.src = "doors-edit.png";
+  //display.sprite_sheet.image.src = "doors-edit.png";
+  display.sprite_sheet.image.src = "all_sprites.png";
 
   window.addEventListener("resize", display.resize);
 
