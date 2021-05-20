@@ -5,10 +5,10 @@
   "background_color":"#202830",
   "floor":120,
   "height":132,
-  "width":326,
+  "width":346,
 
   "doors":[
-      { "area":"area1.json", "x":315, "new_x":11 }
+      { "area":"area1.json", "x":335, "new_x":11 }
   ],
   "img":"None"
 
