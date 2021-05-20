@@ -17,14 +17,26 @@ edges of the sprite image. */
 
 (function() { "use strict";
 
-const function typeWriter(context,txt,speed=50,x=10,y=20){
-      var i;
-      i = 0;
-      if (i < txt.length) {
-          context.fillText(game.area.message.charAt(i),x,y);
+const function typeWriter(context,txt,speed=50,x=10,y=20,wrap=0,y2=30){
+    var i;
+    i = 0;
+    //assume text is short enough that we only wrap once, easily generalizable with for loop over wrap*j
+    if(wrap>0){
+       if (i < wrap) {
+          context.fillText(txt.charAt(i),x,y);
+          context.fillText(txt.charAt(i+wrap),x,y2);
           i++;
           setTimeout(typeWriter, speed);
           }
+
+    }
+    else{
+      if (i < txt.length) {
+          context.fillText(txt.charAt(i),x,y);
+          i++;
+          setTimeout(typeWriter, speed);
+          }
+    }
 };
 
 
