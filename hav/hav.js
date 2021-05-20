@@ -238,8 +238,12 @@ edges of the sprite image. */
 
 
    typeWriter:function typeWriter(context,txt,speed=50,x=10,y=20,wrap=0,y2=30){
+    if(i == null){
     var i;
     i = 0;
+    }
+    //var i;
+    //i = 0;
     //assume text is short enough that we only wrap once, easily generalizable with for loop over wrap*j
     if(wrap>0){
        if (i < wrap) {
