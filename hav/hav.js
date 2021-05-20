@@ -237,7 +237,7 @@ edges of the sprite image. */
     },
 
 
-    typeWriter:function (txt,speed=50,x=10,y=20,wrap=0,y2=30){
+    typeWriter:function(txt,speed=50,x=10,y=20,wrap=0,y2=30){
     if(i == null){
     var i;
     i = 0;
