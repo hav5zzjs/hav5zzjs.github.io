@@ -7,8 +7,8 @@
   "width":216,
 
   "doors":[
-      { "area":"area2.json", "x":11, "new_x":205 },
-      { "area":"area4.json", "x":205, "new_x":11 }
+      { "area":"area2.json", "x":16, "new_x":200 },
+      { "area":"area4.json", "x":200, "new_x":16 }
   ],
   "img":"drag.png"
 
