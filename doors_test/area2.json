@@ -7,7 +7,7 @@
   "width":256,
 
   "doors":[
-      { "area":"area1.json", "x":11, "new_x":245 },
+      { "area":"area1.json", "x":11, "new_x":265 },
       { "area":"area3.json", "x":240, "new_x":11 }
   ],
   "img":"funnel.png"

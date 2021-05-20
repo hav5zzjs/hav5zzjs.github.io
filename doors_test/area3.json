@@ -4,11 +4,11 @@
   "background_color":"#202830",
   "floor":120,
   "height":132,
-  "width":216,
+  "width":206,
 
   "doors":[
-      { "area":"area2.json", "x":16, "new_x":200 },
-      { "area":"area4.json", "x":200, "new_x":16 }
+      { "area":"area2.json", "x":16, "new_x":240 },
+      { "area":"area4.json", "x":190, "new_x":16 }
   ],
   "img":"drag.png"
 

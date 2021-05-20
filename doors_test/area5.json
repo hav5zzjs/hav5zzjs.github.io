@@ -7,7 +7,7 @@
   "width":226,
 
   "doors":[
-      { "area":"area4.json", "x":11, "new_x":215 },
+      { "area":"area4.json", "x":11, "new_x":245 },
       { "area":"area6.json", "x":215, "new_x":11 }
   ],
   "img":"cheeseboard.png"

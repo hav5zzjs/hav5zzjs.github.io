@@ -7,7 +7,7 @@
   "width":256,
 
   "doors":[
-      { "area":"area3.json", "x":11, "new_x":245 },
+      { "area":"area3.json", "x":11, "new_x":190 },
       { "area":"area5.json", "x":245, "new_x":11 }
   ],
   "img":"parking.png"
