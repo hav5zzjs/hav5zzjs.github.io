@@ -1,14 +1,14 @@
 {
 
-  "message":"Hi! As you know my memory is not the best, but there are a few of my favorite memories we had together",
-  "message2":"that I revisit in my head, but couldn't find any photos for. Walk to the right to check them out!",
+  "message":"Hi! As you know my memory is not the best, but there are a few of my favorite memories we had",
+  "message2":"that I revisit in my head, but couldn't find photos for. Walk to the right to check them out!",
   "background_color":"#202830",
   "floor":120,
   "height":132,
-  "width":346,
+  "width":386,
 
   "doors":[
-      { "area":"area1.json", "x":335, "new_x":11 }
+      { "area":"area1.json", "x":365, "new_x":11 }
   ],
   "img":"None"
 
