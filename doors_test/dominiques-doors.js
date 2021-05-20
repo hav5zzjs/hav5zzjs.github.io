@@ -17,10 +17,16 @@ edges of the sprite image. */
 
 (function() { "use strict";
 
-// Dynamic Width (Build Regex)
-  const wrap = (s, w) => s.replace(
-    new RegExp(`(?![^\\n]{1,${w}}$)([^\\n]{1,${w}})\\s`, 'g'), '$1\n'
-  );
+const function typeWriter(context,txt,speed=50,x=10,y=20){
+      var i;
+      i = 0;
+      if (i < txt.length) {
+          context.fillText(game.area.message.charAt(i),x,y);
+          i++;
+          setTimeout(typeWriter, speed);
+          }
+};
+
 
   const Animation = function(frame_set, delay, mode = "loop") {
 
@@ -289,16 +295,24 @@ edges of the sprite image. */
       //here is where the canvas gets drawn -i.e. the background
       this.context.drawImage(this.buffer.canvas, 0, 0, game.area.width, game.area.height, 0, 0, this.context.canvas.width, this.context.canvas.height);
 
+
+      // Dynamic Width (Build Regex)
+      //s.replace(new RegExp(`(?![^\\n]{1,${w}}$)([^\\n]{1,${w}})\\s`, 'g'), '$1\n');
+
+
+
+
+
       //this.context.fillStyle = "#ffffff"; //white
       this.context.fillStyle = "#e6b800"; //gold
       this.context.font = "20px Arial";
       //this.context.shadowColor="#ffffff";//"#997a00";
       //this.context.shadowBlur=1;
-      wrap(game.area.message,64);
-      this.context.fillText(game.area.message, 10, 20);
+      //wrap(game.area.message,64);
+      //this.context.fillText(game.area.message, 10, 20);
       //this.context.fillText(game.area.img, 10, 20);
-
-    },
+      typeWriter(this.context,game.area.message);
+          },
 
     resize:function(event) {
 
