@@ -255,6 +255,8 @@ edges of the sprite image. */
       //this.buffer.fillStyle = "#ffffff";
       //this.buffer.fillRect(0, 0,5, 5);
       this.buffer.drawImage(image2, 0, 0, image2.width, image2.height, 0, 0, image2.width, image2.height);
+      game.area.height = image2.height; //+ game.area.floor
+      game.area.width= image2.width; //+ game.area.floor
       }
 
       /*draw the "ceiling" with same thickness as floor*/
