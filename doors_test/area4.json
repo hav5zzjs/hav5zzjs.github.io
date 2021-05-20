@@ -1,0 +1,15 @@
+{
+
+  "message":"Snoozing together in the back of a little rental car somewhere in Washington...",
+  "background_color":"#202830",
+  "floor":124,
+  "height":132,
+  "width":256,
+
+  "doors":[
+      { "area":"area3.json", "x":11, "new_x":190 },
+      { "area":"area5.json", "x":245, "new_x":11 }
+  ],
+  "img":"parking.png"
+
+}
