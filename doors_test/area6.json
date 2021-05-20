@@ -1,0 +1,14 @@
+{
+
+  "message":"Happy Anniversary!!! Looking forward to adding many more happiest moments to my collection =]",
+  "background_color":"#202830",
+  "floor":120,
+  "height":132,
+  "width":186,
+
+  "doors":[
+      { "area":"area5.json", "x":11, "new_x":210 }
+  ],
+  "img":"fireworks.png"
+
+}
