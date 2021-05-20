@@ -246,7 +246,7 @@ edges of the sprite image. */
           context.fillText(txt.charAt(i),x,y);
           context.fillText(txt.charAt(i+wrap),x,y2);
           i++;
-          setTimeout(typeWriter, speed);
+          setTimeout(this.typeWriter, speed);
           }
 
     }
@@ -254,7 +254,7 @@ edges of the sprite image. */
       if (i < txt.length) {
           context.fillText(txt.charAt(i),x,y);
           i++;
-          setTimeout(typeWriter, speed);
+          setTimeout(this.typeWriter, speed);
           }
     }
     },
@@ -329,7 +329,7 @@ edges of the sprite image. */
       //this.context.fillText(game.area.message, 10, 20);
       //this.context.fillText(game.area.img, 10, 20);
       this.typeWriter(this.context,game.area.message);
-          },
+      },
 
     resize:function(event) {
 
