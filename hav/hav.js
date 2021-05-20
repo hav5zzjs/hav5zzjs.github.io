@@ -205,7 +205,7 @@ edges of the sprite image. */
     buffer:document.createElement("canvas").getContext("2d"),
     context:document.querySelector("canvas").getContext("2d"),
     height_width_ratio:undefined,
-    i:0
+    i:0,
 
     sprite_sheet: {
       // x, y , width , height, offset_x, offset_y
